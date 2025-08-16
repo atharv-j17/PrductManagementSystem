@@ -10,6 +10,9 @@ import com.productmanagementsystem.service.ProductService;
 import com.productmanagementsystem.util.ResponseStructure;
 
 @RestController
+/*
+ * creating REST API
+ */
 public class ProductController {
 
 	@Autowired
@@ -19,4 +22,5 @@ public class ProductController {
 	public ResponseEntity<ResponseStructure<Product>> createProduct(Product p) {
 		return service.addProduct(p);
 	}
+	
 }
