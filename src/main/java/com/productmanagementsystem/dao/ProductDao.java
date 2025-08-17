@@ -1,5 +1,8 @@
 package com.productmanagementsystem.dao;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -16,5 +19,16 @@ public class ProductDao {
 		return jpa.save(p);
 	}
 	
+	public List<Product> findAll() {
+		return jpa.findAll();
+	}
+	
+	public Optional<Product> findByID(int id){
+		return jpa.findById(id);
+	}
+	
+	public void deleteById(Product p) {
+		 jpa.delete(p);
+	}
 }
 	
